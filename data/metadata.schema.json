@@ -44,7 +44,7 @@
     "title": "Astroneer Mod Metadata v1",
     "properties": {
         "schema_version": {
-            "default": 0,
+            "default": 1,
             "description": "An integer that represents the current version of the metadata.json standard that is being used.",
             "examples": [
                 1
