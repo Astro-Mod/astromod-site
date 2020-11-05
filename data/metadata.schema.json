@@ -1,0 +1,192 @@
+{
+    "default": {},
+    "description": "Astroneer Mod Metadata v1",
+    "examples": [
+        {
+            "schema_version": 1,
+            "name": "Example Mod",
+            "mod_id": "ExampleMod",
+            "author": "Example User",
+            "description": "An Example Mod",
+            "version": "0.1.0",
+            "astro_build": "1.16.70.0",
+            "sync": "serverclient",
+            "homepage": "https://galaxy.astromod.space/ExampleMod",
+            "download": {
+                "type": "index_file",
+                "url": "https://galaxy.astromod.space/ExampleMod/index.json"
+            },
+            "linked_actor_components": {
+                "/Game/Globals/PlayControllerInstance": [
+                    "/Game/Globals/ModdedCGUIActorComponent"
+                ]
+            },
+            "item_list_entries": {
+                "/Game/InitialUnlocks_Generous": {
+                    "ItemTypes": [
+                        "/Game/Items/ItemTypes/Components/LevelingBlock"
+                    ]
+                },
+                "/Game/Items/BackpackRail": {
+                    "Blueprints": [
+                        "/Game/Components_Terrain/LevelingBlock"
+                    ]
+                }
+            }
+        }
+    ],
+    "required": [
+        "schema_version",
+        "name",
+        "mod_id",
+        "version"
+    ],
+    "title": "Astroneer Mod Metadata v1",
+    "properties": {
+        "schema_version": {
+            "default": 0,
+            "description": "An integer that represents the current version of the metadata.json standard that is being used.",
+            "examples": [
+                1
+            ],
+            "title": "The schema_version schema"
+        },
+        "name": {
+            "default": "",
+            "description": "A plain text name for the mod.",
+            "examples": [
+                "Example Mod"
+            ],
+            "title": "The name schema"
+        },
+        "mod_id": {
+            "default": "",
+            "description": "The ID for the mod, which should be the exact same as the mod ID specifiedin the mod's original file name.",
+            "examples": [
+                "ExampleMod"
+            ],
+            "title": "The mod_id schema",
+            "pattern": "/^([A-Z0-9][A-Za-z0-9]+)*/"
+        },
+        "author": {
+            "default": "",
+            "description": "The Author(s) of the mod.",
+            "examples": [
+                "Example User"
+            ],
+            "title": "The author schema"
+        },
+        "description": {
+            "default": "",
+            "description": "A description of the mod.",
+            "examples": [
+                "An Example Mod"
+            ],
+            "title": "The description schema"
+        },
+        "version": {
+            "default": "",
+            "description": "A version for the mod. The syntax of the version number is recommended to be MAJOR.MINOR.PATCH.",
+            "examples": [
+                "0.1.0"
+            ],
+            "title": "The version schema"
+        },
+        "astro_build": {
+            "default": "",
+            "description": "The Astroneer build for which the mod was built.",
+            "examples": [
+                "1.16.70.0"
+            ],
+            "title": "The astro_build schema"
+        },
+        "sync": {
+            "default": "",
+            "description": "The sync mode between servers and clients.",
+            "examples": [
+                "serverclient"
+            ],
+            "title": "The sync schema",
+            "enum": [
+                "client",
+                "server",
+                "serverclient"
+            ]
+        },
+        "homepage": {
+            "default": "",
+            "description": "A link to the homepage of the mod, a web page where users should go if they want more information about the mod or the author of the mod.",
+            "examples": [
+                "https://galaxy.astromod.space/ExampleMod"
+            ],
+            "title": "The homepage schema"
+        },
+        "download": {
+            "default": {},
+            "description": "An object with fields defining how to auto-update the mod.",
+            "examples": [
+                {
+                    "type": "index_file",
+                    "url": "https://galaxy.astromod.space/ExampleMod/index.json"
+                }
+            ],
+            "title": "The download schema",
+            "properties": {
+                "type": {
+                    "default": "",
+                    "description": "The type of download.",
+                    "examples": [
+                        "index_file"
+                    ],
+                    "title": "The type schema",
+                    "enum": [
+                        "index_file"
+                    ]
+                },
+                "url": {
+                    "default": "",
+                    "description": " If the type field is set to \"index_file\", this is set to the URL of the index file.",
+                    "examples": [
+                        "https://galaxy.astromod.space/ExampleMod/index.json"
+                    ],
+                    "title": "The url schema"
+                }
+            },
+            "additionalProperties": true
+        },
+        "linked_actor_components": {
+            "default": {},
+            "description": "A standard JSON object, where the keys are game paths to Actors and the values are standard JSON arrays that provide a list of game paths that a mod loader should automatically attach to the specified Actors.",
+            "examples": [
+                {
+                    "/Game/Globals/PlayControllerInstance": [
+                        "/Game/Globals/ModdedCGUIActorComponent"
+                    ]
+                }
+            ],
+            "title": "The linked_actor_components schema",
+            "additionalProperties": true
+        },
+        "item_list_entries": {
+            "default": {},
+            "description": "A standard JSON object where the keys are game paths to any asset and the values are standard JSON objects where the keys are array names to modify in the asset and the values are standard JSON arrays which list entries to add to the specified array as object pointers. Alternatively, the array names to modify in the asset can be specified with the format category name.",
+            "examples": [
+                {
+                    "/Game/InitialUnlocks_Generous": {
+                        "ItemTypes": [
+                            "/Game/Items/ItemTypes/Components/LevelingBlock"
+                        ]
+                    },
+                    "/Game/Items/BackpackRail": {
+                        "Blueprints": [
+                            "/Game/Components_Terrain/LevelingBlock"
+                        ]
+                    }
+                }
+            ],
+            "title": "The item_list_entries schema",
+            "additionalProperties": true
+        }
+    },
+    "additionalProperties": true
+}
