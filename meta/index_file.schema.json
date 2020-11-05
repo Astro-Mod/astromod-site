@@ -1,0 +1,169 @@
+{
+    "default": {},
+    "description": "Astroneer Mod Index File",
+    "examples": [
+        {
+            "mods": {
+                "ExampleMod": {
+                    "latest_version": "0.1.0",
+                    "versions": {
+                        "0.1.0": {
+                            "download_url": "https://galaxy.astromod.space/ExampleMod/download/0.1.0/ExampleMod.pak",
+                            "filename": "000-ExampleMod-0.1.0_P.pak"
+                        },
+                        "0.0.1": {
+                            "download_url": "https://galaxy.astromod.space/ExampleMod/download/0.0.1/ExampleMod.pak",
+                            "filename": "000-ExampleMod-0.0.1_P.pak"
+                        }
+                    }
+                }
+            }
+        }
+    ],
+    "required": [
+        "mods"
+    ],
+    "title": "Astroneer Mod Index File",
+    "properties": {
+        "mods": {
+            "default": {},
+            "description": "A collection of mods for the index file.",
+            "examples": [
+                {
+                    "ExampleMod": {
+                        "latest_version": "0.1.0",
+                        "versions": {
+                            "0.1.0": {
+                                "download_url": "https://galaxy.astromod.space/ExampleMod/download/0.1.0/ExampleMod.pak",
+                                "filename": "000-ExampleMod-0.1.0_P.pak"
+                            },
+                            "0.0.1": {
+                                "download_url": "https://galaxy.astromod.space/ExampleMod/download/0.0.1/ExampleMod.pak",
+                                "filename": "000-ExampleMod-0.0.1_P.pak"
+                            }
+                        }
+                    }
+                }
+            ],
+            "title": "The mods schema",
+            "properties": {
+                "ExampleMod": {
+                    "default": {},
+                    "examples": [
+                        {
+                            "latest_version": "0.1.0",
+                            "versions": {
+                                "0.1.0": {
+                                    "download_url": "https://galaxy.astromod.space/ExampleMod/download/0.1.0/ExampleMod.pak",
+                                    "filename": "000-ExampleMod-0.1.0_P.pak"
+                                },
+                                "0.0.1": {
+                                    "download_url": "https://galaxy.astromod.space/ExampleMod/download/0.0.1/ExampleMod.pak",
+                                    "filename": "000-ExampleMod-0.0.1_P.pak"
+                                }
+                            }
+                        }
+                    ],
+                    "required": [
+                        "latest_version",
+                        "versions"
+                    ],
+                    "title": "The ExampleMod schema",
+                    "properties": {
+                        "latest_version": {
+                            "default": "",
+                            "examples": [
+                                "0.1.0"
+                            ],
+                            "title": "The latest_version schema"
+                        },
+                        "versions": {
+                            "default": {},
+                            "examples": [
+                                {
+                                    "0.1.0": {
+                                        "download_url": "https://galaxy.astromod.space/ExampleMod/download/0.1.0/ExampleMod.pak",
+                                        "filename": "000-ExampleMod-0.1.0_P.pak"
+                                    },
+                                    "0.0.1": {
+                                        "download_url": "https://galaxy.astromod.space/ExampleMod/download/0.0.1/ExampleMod.pak",
+                                        "filename": "000-ExampleMod-0.0.1_P.pak"
+                                    }
+                                }
+                            ],
+                            "title": "The versions schema",
+                            "properties": {
+                                "0.1.0": {
+                                    "default": {},
+                                    "examples": [
+                                        {
+                                            "download_url": "https://galaxy.astromod.space/ExampleMod/download/0.1.0/ExampleMod.pak",
+                                            "filename": "000-ExampleMod-0.1.0_P.pak"
+                                        }
+                                    ],
+                                    "required": [
+                                        "download_url",
+                                        "filename"
+                                    ],
+                                    "title": "The 0.1.0 schema",
+                                    "properties": {
+                                        "download_url": {
+                                            "default": "",
+                                            "examples": [
+                                                "https://galaxy.astromod.space/ExampleMod/download/0.1.0/ExampleMod.pak"
+                                            ],
+                                            "title": "The download_url schema"
+                                        },
+                                        "filename": {
+                                            "default": "",
+                                            "examples": [
+                                                "000-ExampleMod-0.1.0_P.pak"
+                                            ],
+                                            "title": "The filename schema"
+                                        }
+                                    },
+                                    "additionalProperties": true
+                                },
+                                "0.0.1": {
+                                    "default": {},
+                                    "examples": [
+                                        {
+                                            "download_url": "https://galaxy.astromod.space/ExampleMod/download/0.0.1/ExampleMod.pak",
+                                            "filename": "000-ExampleMod-0.0.1_P.pak"
+                                        }
+                                    ],
+                                    "required": [
+                                        "download_url",
+                                        "filename"
+                                    ],
+                                    "title": "The 0.0.1 schema",
+                                    "properties": {
+                                        "download_url": {
+                                            "default": "",
+                                            "examples": [
+                                                "https://galaxy.astromod.space/ExampleMod/download/0.0.1/ExampleMod.pak"
+                                            ],
+                                            "title": "The download_url schema"
+                                        },
+                                        "filename": {
+                                            "default": "",
+                                            "examples": [
+                                                "000-ExampleMod-0.0.1_P.pak"
+                                            ],
+                                            "title": "The filename schema"
+                                        }
+                                    },
+                                    "additionalProperties": true
+                                }
+                            },
+                            "additionalProperties": true
+                        }
+                    },
+                    "additionalProperties": true
+                }
+            },
+            "additionalProperties": true
+        }
+    },
+    "additionalProperties": true
+}
