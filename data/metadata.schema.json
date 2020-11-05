@@ -18,7 +18,7 @@
             },
             "linked_actor_components": {
                 "/Game/Globals/PlayControllerInstance": [
-                    "/Game/Globals/ModdedCGUIActorComponent"
+                    "/Game/ExampleUser/ModdedCGUIActorComponent"
                 ]
             },
             "item_list_entries": {
@@ -161,7 +161,7 @@
             "examples": [
                 {
                     "/Game/Globals/PlayControllerInstance": [
-                        "/Game/Globals/ModdedCGUIActorComponent"
+                        "/Game/ExampleUser/ModdedCGUIActorComponent"
                     ]
                 }
             ],
