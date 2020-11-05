@@ -110,7 +110,8 @@
             "enum": [
                 "client",
                 "server",
-                "serverclient"
+                "serverclient",
+                "none"
             ]
         },
         "homepage": {
@@ -169,7 +170,7 @@
         },
         "item_list_entries": {
             "default": {},
-            "description": "A standard JSON object where the keys are game paths to any asset and the values are standard JSON objects where the keys are array names to modify in the asset and the values are standard JSON arrays which list entries to add to the specified array as object pointers. Alternatively, the array names to modify in the asset can be specified with the format category name.",
+            "description": "A standard JSON object where the keys are game paths to any asset and the values are standard JSON objects where the keys are array names to modify in the asset and the values are standard JSON arrays which list entries to add to the specified array as object pointers.",
             "examples": [
                 {
                     "/Game/InitialUnlocks_Generous": {
